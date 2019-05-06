@@ -25,9 +25,14 @@ void Gerenciador::gerencia()
     func = emp.getFuncionarios();
     
     string aux = "";
-    int aux2, iterator = 0;
+    double aux2; 
+    int iterator = 0;
     float aux3;
 
+    time_t tempo;
+    struct tm tmp = {0};
+    int ano;
+    tmp.tm_year = ano -1901;
     while (1)
     {
         int op = 0;
@@ -75,6 +80,15 @@ void Gerenciador::gerencia()
                     cin >> aux3;
                     fun.setSalario(aux3);
                     fun.setData(time(0));
+                    cout << "Digite a data de adimissao de acordo com o que se pede: "<< endl;
+                    cout << "Dia: " << endl;
+                    cin >> tmp.tm_mday;
+                    cout << "Mes: " << endl;
+                    cin >> tmp.tm_mon;
+                    cout << "Ano: " << endl;
+                    cin >> ano;
+                    fun.setData(mktime(&tmp));
+                    cout << fun.getData() << endl;
                     emp.cadastrar_funcionario(fun);
                 }
             }

@@ -11,13 +11,13 @@ class Funcionario{
         string nome;
         time_t data_de_admissao;
         float salario;
-        int cpf;
+        double cpf;
     
     public:
         void setNome(string nome);
         void setData(time_t data_de_admissao);
         void setSalario(float salario);
-        void setCpf(int cpf);
+        void setCpf(double cpf);
 
         string getNome();
         time_t getData();

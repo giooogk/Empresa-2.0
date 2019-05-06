@@ -31,7 +31,7 @@ float Funcionario::getSalario()
     return this->salario;
 }
 
-void Funcionario::setCpf(int cpf)
+void Funcionario::setCpf(double cpf)
 {
     this->cpf = cpf;
 }
