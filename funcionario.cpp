@@ -20,7 +20,7 @@ string Funcionario::getNome()
     return this->nome;
 }
 /**
- * @brief atribuir data de admissao do funcionario
+ * @brief atribuir data de admissão do funcionario
  * 
  * @param data_de_admissao 
  */
@@ -29,7 +29,7 @@ void Funcionario::setData(time_t data_de_admissao)
     this->data_de_admissao = data_de_admissao;
 }
 /**
- * @brief pegar data de admissao do funcionario
+ * @brief pegar data de admissão do funcionario
  * 
  * @return time_t 
  */
@@ -38,7 +38,7 @@ time_t Funcionario::getData()
     return this->data_de_admissao;
 }
 /**
- * @brief atribuir salario do funcionario
+ * @brief atribuir salário do funcionario
  * 
  * @param salario 
  */
@@ -47,7 +47,7 @@ void Funcionario::setSalario(float salario)
     this->salario = salario;
 }
 /**
- * @brief pegar o valor do salario do funcionario
+ * @brief pegar o valor do salário do funcionario
  * 
  * @return float 
  */

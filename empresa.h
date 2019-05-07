@@ -13,7 +13,7 @@ using namespace std;
 class Empresa{
     private:
         /**
-         * @brief atributos/variaveis da minha classe empresa
+         * @brief atributos/variáveis da minha classe empresa
          * 
          */
         string nome_empresa;
@@ -22,14 +22,14 @@ class Empresa{
 
     public:
         /**
-         * @brief medotos de funcionalidades da empresa
+         * @brief médotos de funcionalidades da empresa
          * 
          */
         int cadastrar_funcionario(Funcionario funcionario);
         int dar_aumento(float porcentagem);
         int quantidade_funcionarios();
         /**
-         * @brief medotos para pegar e atribuir valores das variaveis
+         * @brief médotos para pegar e atribuir valores das variáveis
          * 
          */
         map<int,Funcionario> getFuncionarios_expreriencia();

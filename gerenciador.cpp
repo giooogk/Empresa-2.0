@@ -11,13 +11,13 @@
 using namespace std;
 
 /**
- * @brief menu do meu programa empresa-funcionario
+ * @brief Menu do programa empresa-funcionario
  * 
  */
 void Gerenciador::gerencia()
 {
     /**
-     * @brief variaveis 
+     * @brief variáveis 
      * 
      */
     Empresa emp;

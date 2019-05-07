@@ -6,7 +6,7 @@
 
 using namespace std;
 /**
- * @brief medoto para cadastrar funcionario
+ * @brief médoto para cadastrar funcionario
  * 
  * @param funcionario
  * @return int
@@ -16,7 +16,7 @@ int Empresa::cadastrar_funcionario(Funcionario funcionario)
     map <int,Funcionario> :: iterator it;
     it = fun.find(funcionario.getCpf());
     /**
-     * @brief verificacao de existencia do funcionario se já existir retorna a um erro, caso contrario cria
+     * @brief verificação de existência do funcionario se já existir retorna a um erro, caso contrario cria
      * 
      */
     if(it == fun.end())
@@ -30,7 +30,7 @@ int Empresa::cadastrar_funcionario(Funcionario funcionario)
     return 1;
 }
 /**
- * @brief dar aumento aos funcionarios de uma determinada empresa
+ * @brief médoto dá aumento aos funcionarios de uma determinada empresa
  * 
  * @param porcentagem 
  * @return int 
@@ -46,7 +46,7 @@ int Empresa::dar_aumento(float porcentagem)
     return 1;
 }
 /**
- * @brief sabber a quantidade de funcionario de uma empresa
+ * @brief saber a quantidade de funcionario de uma empresa
  * 
  * @return int
  */
@@ -100,7 +100,7 @@ map<int,Funcionario> &Empresa::getFuncionarios()
     return fun;
 }
 /**
- * @brief pegar os funcionarios em experiencia
+ * @brief pegar os funcionarios em experiência
  * 
  * @return map<int,Funcionario> 
  */
