@@ -10,9 +10,16 @@
 
 using namespace std;
 
-
+/**
+ * @brief menu do meu programa empresa-funcionario
+ * 
+ */
 void Gerenciador::gerencia()
 {
+    /**
+     * @brief variaveis 
+     * 
+     */
     Empresa emp;
     Funcionario fun;
 
@@ -33,6 +40,7 @@ void Gerenciador::gerencia()
     struct tm tmp = {0};
     int ano;
     tmp.tm_year = ano -1901;
+    
     while (1)
     {
         int op = 0;
@@ -113,7 +121,7 @@ void Gerenciador::gerencia()
                     it_func = it_empresa->second.getFuncionarios_expreriencia().begin();
                     for(it_func; it_func != it_empresa->second.getFuncionarios_expreriencia().end(); it_func++)
                     {
-                       cout << it_func->second.getNome() << " - " << it_func->second.getCpf() << endl;
+                       cout << &it_func->second.getNome() << " - " << it_func->second.getCpf() << endl;
                     }
                 }
             }
