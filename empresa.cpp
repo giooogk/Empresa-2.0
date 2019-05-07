@@ -1,3 +1,18 @@
+/**
+ * @file empresa.cpp
+ * @author Frankleiton Levy (frankleiton@gmail.com) e Giovanna Karla (macedo1999.gk@gmail.com)
+ *
+ * @brief Sistema Empresa-Funcionario 
+ * @version 1.0
+ *
+ * since 23-04-2019
+ * @date 06-05-2019
+ *
+ * @sa Materiais disponiveis no SIGAA da materia de LP-I 2019.1
+ * 
+ */
+
+#include <iostream>
 #include <string>
 #include <map>
 
@@ -21,16 +36,17 @@ int Empresa::cadastrar_funcionario(Funcionario funcionario)
      */
     if(it == fun.end())
     {
-        return 404;
+        fun.insert(pair<int, Funcionario>(funcionario.getCpf(),funcionario));
     }
     else
     {
-        fun.insert(pair<int, Funcionario>(funcionario.getCpf(),funcionario));
+        return 404;
     }
+
     return 1;
 }
 /**
- * @brief médoto dá aumento aos funcionarios de uma determinada empresa
+ * @brief médoto dar aumento aos funcionarios de uma determinada empresa
  * 
  * @param porcentagem 
  * @return int 
@@ -104,21 +120,25 @@ map<int,Funcionario> &Empresa::getFuncionarios()
  * 
  * @return map<int,Funcionario> 
  */
-map<int,Funcionario> Empresa::getFuncionarios_expreriencia()
+map<int,Funcionario> &Empresa::getFuncionarios_expreriencia()
 {
     time_t hoje = time(0);
-    map<int,Funcionario> fun_expreriencia;
     map <int,Funcionario> :: iterator it;
     it = fun.begin();
-
-    for(it; it != fun.end(); it++)
+    
+    for(it; it != fun.end(); ++it)
     {
         if((hoje - it->second.getData()) / 86400 <= 90 )
         {
-            fun_expreriencia.insert(pair<int, Funcionario>(it->second.getCpf(), it->second));
+            cout << "Nome: " << it->second.getNome() << endl;
+            cout << "Salario: " << it->second.getSalario() << endl;
+            cout << "CPF: " << it->second.getCpf() << endl;
+
+            fun_exp.insert(pair<int, Funcionario>(it->second.getCpf(), it->second));
         }
     }
-    return fun_expreriencia;
+
+    return fun_exp;
 }
 /**
  * @brief Construct a new Empresa:: Empresa object

@@ -1,3 +1,17 @@
+/**
+ * @file empresa.h
+ * @author Frankleiton Levy (frankleiton@gmail.com) e Giovanna Karla (macedo1999.gk@gmail.com)
+ *
+ * @brief Sistema Empresa-Funcionario 
+ * @version 1.0
+ *
+ * since 23-04-2019
+ * @date 06-05-2019
+ *
+ * @sa Materiais disponiveis no SIGAA da materia de LP-I 2019.1
+ * 
+ */
+
 #ifndef empresa_H
 #define empresa_H
 
@@ -19,6 +33,7 @@ class Empresa{
         string nome_empresa;
         int cnpj;
         map<int,Funcionario> fun;
+        map<int,Funcionario> fun_exp;
 
     public:
         /**
@@ -32,7 +47,7 @@ class Empresa{
          * @brief médotos para pegar e atribuir valores das variáveis
          * 
          */
-        map<int,Funcionario> getFuncionarios_expreriencia();
+        map<int,Funcionario> &getFuncionarios_expreriencia();
         map<int,Funcionario> &getFuncionarios();
         void setNome(string nome_empresa);
         string getNome();
